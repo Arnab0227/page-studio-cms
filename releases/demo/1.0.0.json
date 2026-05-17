@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "publishedAt": "2026-05-16T20:08:16.582Z",
+    "slug": "demo",
+    "changelog": [
+      "Published version with 2 components"
+    ],
+    "pageId": "demo-page",
+    "contentHash": "0475ccd768341fb3e9926794f7e78d8748d4defa5f59780a47bf07846bcd3549"
+  },
+  "page": {
+    "sys": {
+      "id": "demo-page",
+      "type": "Entry",
+      "createdAt": "2026-05-16T20:07:55.569Z",
+      "updatedAt": "2026-05-16T20:07:55.569Z",
+      "locale": "en-US",
+      "revision": 1,
+      "space": {
+        "sys": {
+          "id": "merh65vl8pmr",
+          "type": "Link",
+          "linkType": "Space"
+        }
+      },
+      "contentType": {
+        "sys": {
+          "id": "page",
+          "type": "Link",
+          "linkType": "ContentType"
+        }
+      }
+    },
+    "fields": {
+      "title": "Demo Page",
+      "slug": "demo",
+      "components": [
+        {
+          "id": "1778962076479-flf4hj9k5",
+          "type": "text",
+          "props": {
+            "content": "dfsd",
+            "variant": "h2"
+          },
+          "metadata": {
+            "createdAt": "2026-05-16T20:07:56.479Z",
+            "updatedAt": "2026-05-16T20:07:56.479Z"
+          }
+        },
+        {
+          "id": "1778962086470-3nmkn2nd7",
+          "type": "hero",
+          "props": {
+            "content": "dfsd",
+            "variant": "h2",
+            "headline": "dfsdfsd",
+            "description": "dfsd",
+            "_x": 161,
+            "_y": 164
+          },
+          "metadata": {
+            "createdAt": "2026-05-16T20:08:06.470Z",
+            "updatedAt": "2026-05-16T20:08:06.470Z"
+          }
+        }
+      ],
+      "published": false
+    }
+  },
+  "components": [
+    {
+      "id": "1778962076479-flf4hj9k5",
+      "type": "text",
+      "props": {
+        "content": "dfsd",
+        "variant": "h2"
+      },
+      "metadata": {
+        "createdAt": "2026-05-16T20:07:56.479Z",
+        "updatedAt": "2026-05-16T20:07:56.479Z"
+      }
+    },
+    {
+      "id": "1778962086470-3nmkn2nd7",
+      "type": "hero",
+      "props": {
+        "content": "dfsd",
+        "variant": "h2",
+        "headline": "dfsdfsd",
+        "description": "dfsd",
+        "_x": 161,
+        "_y": 164
+      },
+      "metadata": {
+        "createdAt": "2026-05-16T20:08:06.470Z",
+        "updatedAt": "2026-05-16T20:08:06.470Z"
+      }
+    }
+  ]
+}

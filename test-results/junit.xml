@@ -1,0 +1,1822 @@
+<testsuites id="" name="" tests="92" failures="27" skipped="0" errors="15" time="179.93270700000002">
+<testsuite name="editor.spec.ts" timestamp="2026-05-16T20:00:26.978Z" hostname="chromium" tests="18" failures="11" skipped="0" time="244.88" errors="6">
+<testcase name="Page Studio Editor › should load editor interface" classname="editor.spec.ts" time="1.731">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-load-editor-interface-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-load-editor-interface-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › editor.spec.ts:22:7 › Page Studio Editor › should load editor interface ─────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Components')
+    Expected: visible
+    Error: strict mode violation: locator('text=Components') resolved to 4 elements:
+        1) <h2 class="text-sm font-semibold text-gray-900">Components</h2> aka getByRole('heading', { name: 'Components' })
+        2) <p class="text-lg mb-2">Drag components to canvas to get started</p> aka getByText('Drag components to canvas to')
+        3) <p class="text-sm">Position and resize components freely</p> aka getByText('Position and resize')
+        4) <span>0 components on page</span> aka getByText('components on page')
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Components')
+
+
+      22 |   test('should load editor interface', async () => {
+      23 |     // Check for main editor components
+    > 24 |     await expect(page.locator('text=Components')).toBeVisible();
+         |                                                   ^
+      25 |     await expect(page.locator('text=Unsaved changes')).toBeHidden();
+      26 |   });
+      27 |
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:24:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-load-editor-interface-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-load-editor-interface-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should add button component to canvas" classname="editor.spec.ts" time="6.789">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--1e2c8--button-component-to-canvas-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--1e2c8--button-component-to-canvas-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › editor.spec.ts:28:7 › Page Studio Editor › should add button component to canvas ────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Click me')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Click me')
+
+
+      32 |
+      33 |     // Verify button was added to canvas
+    > 34 |     await expect(page.locator('text=Click me')).toBeVisible();
+         |                                                 ^
+      35 |   });
+      36 |
+      37 |   test('should add multiple components', async () => {
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:34:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--1e2c8--button-component-to-canvas-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--1e2c8--button-component-to-canvas-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should add multiple components" classname="editor.spec.ts" time="6.8">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-multiple-components-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-multiple-components-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › editor.spec.ts:37:7 › Page Studio Editor › should add multiple components ───────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Click me')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Click me')
+
+
+      45 |
+      46 |     // Verify both components are on canvas
+    > 47 |     await expect(page.locator('text=Click me')).toBeVisible();
+         |                                                 ^
+      48 |     await expect(page.locator('text=Add your text here')).toBeVisible();
+      49 |   });
+      50 |
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:47:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-add-multiple-components-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-add-multiple-components-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should drag component from palette to canvas" classname="editor.spec.ts" time="30.079">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--89454-nent-from-palette-to-canvas-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--89454-nent-from-palette-to-canvas-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › editor.spec.ts:51:7 › Page Studio Editor › should drag component from palette to canvas 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.dragTo: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('[title="Content card with image"]').first()
+        - locator resolved to <div draggable="true" title="Content card with image" class="p-3 rounded-lg border border-gray-200 cursor-move hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group">…</div>
+      - attempting move and down action
+        - waiting for element to be visible and stable
+        - element is visible and stable
+        - scrolling into view if needed
+        - done scrolling
+        - performing move and down action
+        - move and down action done
+        - waiting for scheduled navigations to finish
+        - navigations have finished
+      - waiting for locator('text=Drag components here to get started').first()
+
+
+      57 |
+      58 |     // Drag and drop
+    > 59 |     await cardItem.dragTo(canvas);
+         |                    ^
+      60 |
+      61 |     // Wait a moment for the component to be added
+      62 |     await page.waitForTimeout(500);
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:59:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--89454-nent-from-palette-to-canvas-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--89454-nent-from-palette-to-canvas-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should select component for editing" classname="editor.spec.ts" time="30.078">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--02f11-elect-component-for-editing-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--02f11-elect-component-for-editing-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › editor.spec.ts:68:7 › Page Studio Editor › should select component for editing ──────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('text=Click me').first()
+
+
+      73 |     // Click on the button in the canvas to select it
+      74 |     const buttonInCanvas = page.locator('text=Click me').first();
+    > 75 |     await buttonInCanvas.click();
+         |                          ^
+      76 |
+      77 |     // Verify properties panel shows button properties
+      78 |     await expect(page.locator('text=Button Properties')).toBeVisible();
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:75:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--02f11-elect-component-for-editing-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--02f11-elect-component-for-editing-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should edit button properties" classname="editor.spec.ts" time="30.051">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-edit-button-properties-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-edit-button-properties-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › editor.spec.ts:82:7 › Page Studio Editor › should edit button properties ────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('text=Click me').first()
+
+
+      87 |     // Select button
+      88 |     const buttonInCanvas = page.locator('text=Click me').first();
+    > 89 |     await buttonInCanvas.click();
+         |                          ^
+      90 |
+      91 |     // Edit label
+      92 |     const labelInput = page.locator('input[placeholder="Button text"]');
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:89:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-edit-button-properties-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-edit-button-properties-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should change button variant" classname="editor.spec.ts" time="30.059">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-change-button-variant-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-change-button-variant-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › editor.spec.ts:103:7 › Page Studio Editor › should change button variant ────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('text=Click me').first()
+
+
+      107 |
+      108 |     // Select button
+    > 109 |     await page.locator('text=Click me').first().click();
+          |                                                 ^
+      110 |
+      111 |     // Change variant
+      112 |     const variantSelect = page.locator('#variant').first();
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:109:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-change-button-variant-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-change-button-variant-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should delete component" classname="editor.spec.ts" time="5.958">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-delete-component-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-delete-component-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › editor.spec.ts:124:7 › Page Studio Editor › should delete component ─────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Click me')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Click me')
+
+
+      127 |     await buttonPaletteItem.click();
+      128 |
+    > 129 |     await expect(page.locator('text=Click me')).toBeVisible();
+          |                                                 ^
+      130 |
+      131 |     // Select button
+      132 |     await page.locator('text=Click me').first().click();
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:129:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-delete-component-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-delete-component-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should undo component addition" classname="editor.spec.ts" time="5.958">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-undo-component-addition-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-undo-component-addition-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › editor.spec.ts:145:7 › Page Studio Editor › should undo component addition ──────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Click me')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Click me')
+
+
+      148 |     await buttonPaletteItem.click();
+      149 |
+    > 150 |     await expect(page.locator('text=Click me')).toBeVisible();
+          |                                                 ^
+      151 |
+      152 |     // Click undo
+      153 |     const undoButton = page.locator('button[aria-label="Undo"]');
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:150:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-undo-component-addition-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-undo-component-addition-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should redo component addition" classname="editor.spec.ts" time="30.063">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-redo-component-addition-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-redo-component-addition-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › editor.spec.ts:160:7 › Page Studio Editor › should redo component addition ──────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('button[aria-label="Undo"]')
+        - locator resolved to <button disabled aria-label="Undo" title="Undo (Ctrl+Z)" class="p-2 rounded-md transition-colors opacity-50 cursor-not-allowed">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        56 × waiting for element to be visible, enabled and stable
+           - element is not enabled
+         - retrying click action
+           - waiting 500ms
+
+
+      164 |
+      165 |     // Undo
+    > 166 |     await page.locator('button[aria-label="Undo"]').click();
+          |                                                     ^
+      167 |
+      168 |     // Redo
+      169 |     const redoButton = page.locator('button[aria-label="Redo"]');
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:166:53
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-redo-component-addition-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-redo-component-addition-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should mark changes as unsaved" classname="editor.spec.ts" time="6.051">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-mark-changes-as-unsaved-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-mark-changes-as-unsaved-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › editor.spec.ts:178:7 › Page Studio Editor › should mark changes as unsaved ──────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Unsaved changes')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Unsaved changes')
+
+
+      185 |
+      186 |     // Verify unsaved changes indicator
+    > 187 |     await expect(page.locator('text=Unsaved changes')).toBeVisible();
+          |                                                        ^
+      188 |   });
+      189 |
+      190 |   test('should enable save button only with unsaved changes', async () => {
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:187:56
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-mark-changes-as-unsaved-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-mark-changes-as-unsaved-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should enable save button only with unsaved changes" classname="editor.spec.ts" time="6.039">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--821ae-n-only-with-unsaved-changes-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--821ae-n-only-with-unsaved-changes-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeEnabled() failed" type="expect.toBeEnabled">
+<![CDATA[  [chromium] › editor.spec.ts:190:7 › Page Studio Editor › should enable save button only with unsaved changes 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  locator('button:has-text("Save")')
+    Expected: enabled
+    Received: disabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeEnabled" with timeout 5000ms
+      - waiting for locator('button:has-text("Save")')
+        14 × locator resolved to <button disabled data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground h…>…</button>
+           - unexpected value "disabled"
+
+
+      199 |
+      200 |     // Now enabled
+    > 201 |     await expect(saveButton).toBeEnabled();
+          |                              ^
+      202 |   });
+      203 |
+      204 |   test('should add text component and edit content', async () => {
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:201:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--821ae-n-only-with-unsaved-changes-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--821ae-n-only-with-unsaved-changes-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should add text component and edit content" classname="editor.spec.ts" time="30.048">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--833e0--component-and-edit-content-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--833e0--component-and-edit-content-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › editor.spec.ts:204:7 › Page Studio Editor › should add text component and edit content 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('text=Add your text here')
+
+
+      208 |
+      209 |     // Select text
+    > 210 |     await page.locator('text=Add your text here').click();
+          |                                                   ^
+      211 |
+      212 |     // Edit content
+      213 |     const contentTextarea = page.locator('textarea[placeholder="Text content"]');
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:210:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--833e0--component-and-edit-content-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--833e0--component-and-edit-content-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should add card component" classname="editor.spec.ts" time="6.15">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-card-component-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-card-component-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › editor.spec.ts:224:7 › Page Studio Editor › should add card component ───────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Card Title')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Card Title')
+
+
+      228 |
+      229 |     // Verify card was added
+    > 230 |     await expect(page.locator('text=Card Title')).toBeVisible();
+          |                                                   ^
+      231 |   });
+      232 |
+      233 |   test('should add hero component', async () => {
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:230:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-add-card-component-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-add-card-component-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should add hero component" classname="editor.spec.ts" time="6.149">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-hero-component-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-hero-component-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › editor.spec.ts:233:7 › Page Studio Editor › should add hero component ───────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Welcome to our page')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Welcome to our page')
+
+
+      237 |
+      238 |     // Verify hero was added
+    > 239 |     await expect(page.locator('text=Welcome to our page')).toBeVisible();
+          |                                                            ^
+      240 |   });
+      241 |
+      242 |   test('should add grid component with children', async () => {
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:239:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-add-hero-component-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-add-hero-component-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should add grid component with children" classname="editor.spec.ts" time="1.018">
+</testcase>
+<testcase name="Page Studio Editor › should show/hide empty canvas message" classname="editor.spec.ts" time="5.979">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--5d619-w-hide-empty-canvas-message-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--5d619-w-hide-empty-canvas-message-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › editor.spec.ts:251:7 › Page Studio Editor › should show/hide empty canvas message ───
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Drag components here to get started')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Drag components here to get started')
+
+
+      253 |     await expect(
+      254 |       page.locator('text=Drag components here to get started')
+    > 255 |     ).toBeVisible();
+          |       ^
+      256 |
+      257 |     // Add component
+      258 |     const buttonPaletteItem = page.locator('[title="Clickable button element"]').first();
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:255:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--5d619-w-hide-empty-canvas-message-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--5d619-w-hide-empty-canvas-message-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should display component count in status bar" classname="editor.spec.ts" time="5.88">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--1456c-mponent-count-in-status-bar-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--1456c-mponent-count-in-status-bar-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › editor.spec.ts:267:7 › Page Studio Editor › should display component count in status bar 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=1 component on page')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=1 component on page')
+
+
+      274 |
+      275 |     // Count should update
+    > 276 |     await expect(page.locator('text=1 component on page')).toBeVisible();
+          |                                                            ^
+      277 |
+      278 |     // Add another
+      279 |     await buttonPaletteItem.click();
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:276:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--1456c-mponent-count-in-status-bar-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--1456c-mponent-count-in-status-bar-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="homepage.spec.ts" timestamp="2026-05-16T20:00:26.978Z" hostname="chromium" tests="17" failures="1" skipped="0" time="6.492" errors="1">
+<testcase name="Homepage › Page Rendering › should load homepage successfully" classname="homepage.spec.ts" time="0.322">
+</testcase>
+<testcase name="Homepage › Page Rendering › should display hero section" classname="homepage.spec.ts" time="0.292">
+</testcase>
+<testcase name="Homepage › Page Rendering › should display published pages section" classname="homepage.spec.ts" time="0.387">
+</testcase>
+<testcase name="Homepage › Navigation › should have editor link" classname="homepage.spec.ts" time="0.276">
+</testcase>
+<testcase name="Homepage › Navigation › should navigate to editor when clicked" classname="homepage.spec.ts" time="0.466">
+</testcase>
+<testcase name="Homepage › Published Pages Display › should show published pages if available" classname="homepage.spec.ts" time="0.348">
+</testcase>
+<testcase name="Homepage › Published Pages Display › should have preview button for published pages" classname="homepage.spec.ts" time="0.388">
+</testcase>
+<testcase name="Homepage › Published Pages Display › should have view button for published pages" classname="homepage.spec.ts" time="0.331">
+</testcase>
+<testcase name="Homepage › Accessibility › should have no accessibility violations" classname="homepage.spec.ts" time="0.493">
+<system-out>
+<![CDATA[┌─────────┬──────────────────┬───────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬───────┐
+│ (index) │ id               │ impact    │ description                                                                                                      │ nodes │
+├─────────┼──────────────────┼───────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼───────┤
+│ 0       │ [32m'color-contrast'[39m │ [32m'serious'[39m │ [32m'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds'[39m │ [33m1[39m     │
+└─────────┴──────────────────┴───────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴───────┘
+
+[[ATTACHMENT|homepage-Homepage-Accessib-74b32-no-accessibility-violations-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Homepage-Accessib-74b32-no-accessibility-violations-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="1 accessibility violation was detected" type="AssertionError">
+<![CDATA[  [chromium] › homepage.spec.ts:88:9 › Homepage › Accessibility › should have no accessibility violations 
+
+    AssertionError: 1 accessibility violation was detected
+
+    1 !== 0
+
+        at testResultDependsOnViolations (/Users/arnab/Webdev/Next/page-studio-cms/node_modules/axe-playwright/dist/utils.js:16:26)
+        at /Users/arnab/Webdev/Next/page-studio-cms/node_modules/axe-playwright/dist/index.js:143:51
+        at fulfilled (/Users/arnab/Webdev/Next/page-studio-cms/node_modules/axe-playwright/dist/index.js:28:58)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Homepage-Accessib-74b32-no-accessibility-violations-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/homepage-Homepage-Accessib-74b32-no-accessibility-violations-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Homepage › Accessibility › should have proper heading hierarchy" classname="homepage.spec.ts" time="0.295">
+</testcase>
+<testcase name="Homepage › Accessibility › should have alt text on images" classname="homepage.spec.ts" time="0.332">
+</testcase>
+<testcase name="Homepage › Accessibility › should have accessible links" classname="homepage.spec.ts" time="0.321">
+</testcase>
+<testcase name="Homepage › Accessibility › should have sufficient color contrast" classname="homepage.spec.ts" time="0.409">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|homepage-Homepage-Accessib-440be-e-sufficient-color-contrast-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|homepage-Homepage-Accessib-440be-e-sufficient-color-contrast-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
+<![CDATA[  [chromium] › homepage.spec.ts:130:9 › Homepage › Accessibility › should have sufficient color contrast 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+      134 |       });
+      135 |
+    > 136 |       expect(results.violations.length).toBe(0);
+          |                                         ^
+      137 |     });
+      138 |   });
+      139 |
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/homepage.spec.ts:136:41
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/homepage-Homepage-Accessib-440be-e-sufficient-color-contrast-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/homepage-Homepage-Accessib-440be-e-sufficient-color-contrast-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Homepage › Responsive Design › should be responsive on mobile" classname="homepage.spec.ts" time="0.564">
+</testcase>
+<testcase name="Homepage › Responsive Design › should be responsive on tablet" classname="homepage.spec.ts" time="0.375">
+</testcase>
+<testcase name="Homepage › Responsive Design › should be responsive on desktop" classname="homepage.spec.ts" time="0.46">
+</testcase>
+<testcase name="Homepage › Performance › should load in reasonable time" classname="homepage.spec.ts" time="0.433">
+</testcase>
+</testsuite>
+<testsuite name="preview.spec.ts" timestamp="2026-05-16T20:00:26.978Z" hostname="chromium" tests="11" failures="2" skipped="0" time="44.028" errors="1">
+<testcase name="Preview Pages › Preview Rendering › should render preview page" classname="preview.spec.ts" time="0.749">
+</testcase>
+<testcase name="Preview Pages › Preview Rendering › should show back button" classname="preview.spec.ts" time="5.507">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|preview-Preview-Pages-Prev-dcf91-ing-should-show-back-button-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|preview-Preview-Pages-Prev-dcf91-ing-should-show-back-button-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › preview.spec.ts:21:9 › Preview Pages › Preview Rendering › should show back button ──
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: /back/i })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('button', { name: /back/i })
+
+
+      24 |       if (response && response.status() === 200) {
+      25 |         const backButton = page.getByRole('button', { name: /back/i });
+    > 26 |         await expect(backButton).toBeVisible();
+         |                                  ^
+      27 |       }
+      28 |     });
+      29 |
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/preview.spec.ts:26:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/preview-Preview-Pages-Prev-dcf91-ing-should-show-back-button-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/preview-Preview-Pages-Prev-dcf91-ing-should-show-back-button-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Preview Pages › Preview Rendering › should handle missing pages gracefully" classname="preview.spec.ts" time="0.253">
+</testcase>
+<testcase name="Preview Pages › Preview Navigation › should navigate back to home" classname="preview.spec.ts" time="30.074">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|preview-Preview-Pages-Prev-46e1c-hould-navigate-back-to-home-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|preview-Preview-Pages-Prev-46e1c-hould-navigate-back-to-home-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › preview.spec.ts:42:9 › Preview Pages › Preview Navigation › should navigate back to home 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: /back|home/i }).first()
+
+
+      45 |       if (response && response.status() === 200) {
+      46 |         const backButton = page.getByRole('button', { name: /back|home/i }).first();
+    > 47 |         await backButton.click();
+         |                          ^
+      48 |         await page.waitForURL('/');
+      49 |         expect(page.url()).toContain('/');
+      50 |       }
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/preview.spec.ts:47:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/preview-Preview-Pages-Prev-46e1c-hould-navigate-back-to-home-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/preview-Preview-Pages-Prev-46e1c-hould-navigate-back-to-home-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Preview Pages › Preview Navigation › should have edit link if available" classname="preview.spec.ts" time="0.301">
+</testcase>
+<testcase name="Preview Pages › Preview Accessibility › should have accessible preview page" classname="preview.spec.ts" time="0.496">
+<system-out>
+<![CDATA[┌─────────┬──────────┬────────────┬─────────────────────────────────────────────────────┬───────┐
+│ (index) │ id       │ impact     │ description                                         │ nodes │
+├─────────┼──────────┼────────────┼─────────────────────────────────────────────────────┼───────┤
+│ 0       │ [32m'region'[39m │ [32m'moderate'[39m │ [32m'Ensure all page content is contained by landmarks'[39m │ [33m2[39m     │
+└─────────┴──────────┴────────────┴─────────────────────────────────────────────────────┴───────┘
+Accessibility violations found: AssertionError [ERR_ASSERTION]: 1 accessibility violation was detected
+
+1 !== 0
+
+    at testResultDependsOnViolations [90m(/Users/arnab/Webdev/Next/page-studio-cms/[39mnode_modules/[4maxe-playwright[24m/dist/utils.js:16:26[90m)[39m
+    at [90m/Users/arnab/Webdev/Next/page-studio-cms/[39mnode_modules/[4maxe-playwright[24m/dist/index.js:143:51
+    at Generator.next (<anonymous>)
+    at fulfilled [90m(/Users/arnab/Webdev/Next/page-studio-cms/[39mnode_modules/[4maxe-playwright[24m/dist/index.js:28:58[90m)[39m
+[90m    at runNextTicks (node:internal/process/task_queues:65:5)[39m
+[90m    at processImmediate (node:internal/timers:459:9)[39m
+[90m    at process.callbackTrampoline (node:internal/async_hooks:130:17)[39m {
+  generatedMessage: [33mfalse[39m,
+  code: [32m'ERR_ASSERTION'[39m,
+  actual: [33m1[39m,
+  expected: [33m0[39m,
+  operator: [32m'strictEqual'[39m
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Preview Pages › Preview Accessibility › should have proper structure" classname="preview.spec.ts" time="0.287">
+</testcase>
+<testcase name="Preview Pages › Preview Accessibility › should be keyboard navigable" classname="preview.spec.ts" time="0.328">
+</testcase>
+<testcase name="Preview Pages › Content Display › should display page title if available" classname="preview.spec.ts" time="0.412">
+</testcase>
+<testcase name="Preview Pages › Content Display › should render components" classname="preview.spec.ts" time="0.367">
+</testcase>
+<testcase name="Preview Pages › Mobile Preview › should be mobile responsive" classname="preview.spec.ts" time="5.254">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|preview-Preview-Pages-Mobi-b74b9-should-be-mobile-responsive-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|preview-Preview-Pages-Mobi-b74b9-should-be-mobile-responsive-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › preview.spec.ts:129:9 › Preview Pages › Mobile Preview › should be mobile responsive 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: /back/i })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('button', { name: /back/i })
+
+
+      133 |       if (response && response.status() === 200) {
+      134 |         const backButton = page.getByRole('button', { name: /back/i });
+    > 135 |         await expect(backButton).toBeVisible();
+          |                                  ^
+      136 |       }
+      137 |     });
+      138 |   });
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/preview.spec.ts:135:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/preview-Preview-Pages-Mobi-b74b9-should-be-mobile-responsive-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/preview-Preview-Pages-Mobi-b74b9-should-be-mobile-responsive-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="editor.spec.ts" timestamp="2026-05-16T20:00:26.978Z" hostname="firefox" tests="18" failures="11" skipped="0" time="251.533" errors="6">
+<testcase name="Page Studio Editor › should load editor interface" classname="editor.spec.ts" time="1.947">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-load-editor-interface-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-load-editor-interface-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › editor.spec.ts:22:7 › Page Studio Editor › should load editor interface ──────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Components')
+    Expected: visible
+    Error: strict mode violation: locator('text=Components') resolved to 4 elements:
+        1) <h2 class="text-sm font-semibold text-gray-900">Components</h2> aka getByRole('heading', { name: 'Components' })
+        2) <p class="text-lg mb-2">Drag components to canvas to get started</p> aka getByText('Drag components to canvas to')
+        ...
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Components')
+
+
+      22 |   test('should load editor interface', async () => {
+      23 |     // Check for main editor components
+    > 24 |     await expect(page.locator('text=Components')).toBeVisible();
+         |                                                   ^
+      25 |     await expect(page.locator('text=Unsaved changes')).toBeHidden();
+      26 |   });
+      27 |
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:24:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-load-editor-interface-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-load-editor-interface-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should add button component to canvas" classname="editor.spec.ts" time="6.717">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--1e2c8--button-component-to-canvas-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--1e2c8--button-component-to-canvas-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › editor.spec.ts:28:7 › Page Studio Editor › should add button component to canvas ─────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Click me')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Click me')
+
+
+      32 |
+      33 |     // Verify button was added to canvas
+    > 34 |     await expect(page.locator('text=Click me')).toBeVisible();
+         |                                                 ^
+      35 |   });
+      36 |
+      37 |   test('should add multiple components', async () => {
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:34:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--1e2c8--button-component-to-canvas-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--1e2c8--button-component-to-canvas-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should add multiple components" classname="editor.spec.ts" time="6.599">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-multiple-components-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-multiple-components-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › editor.spec.ts:37:7 › Page Studio Editor › should add multiple components ────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Click me')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Click me')
+
+
+      45 |
+      46 |     // Verify both components are on canvas
+    > 47 |     await expect(page.locator('text=Click me')).toBeVisible();
+         |                                                 ^
+      48 |     await expect(page.locator('text=Add your text here')).toBeVisible();
+      49 |   });
+      50 |
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:47:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-add-multiple-components-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-add-multiple-components-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should drag component from palette to canvas" classname="editor.spec.ts" time="30.112">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--89454-nent-from-palette-to-canvas-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--89454-nent-from-palette-to-canvas-firefox/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [firefox] › editor.spec.ts:51:7 › Page Studio Editor › should drag component from palette to canvas 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.dragTo: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('[title="Content card with image"]').first()
+        - locator resolved to <div draggable="true" title="Content card with image" class="p-3 rounded-lg border border-gray-200 cursor-move hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group">…</div>
+      - attempting move and down action
+        - waiting for element to be visible and stable
+        - element is visible and stable
+        - scrolling into view if needed
+        - done scrolling
+        - performing move and down action
+        - move and down action done
+        - waiting for scheduled navigations to finish
+        - navigations have finished
+      - waiting for locator('text=Drag components here to get started').first()
+
+
+      57 |
+      58 |     // Drag and drop
+    > 59 |     await cardItem.dragTo(canvas);
+         |                    ^
+      60 |
+      61 |     // Wait a moment for the component to be added
+      62 |     await page.waitForTimeout(500);
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:59:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--89454-nent-from-palette-to-canvas-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--89454-nent-from-palette-to-canvas-firefox/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should select component for editing" classname="editor.spec.ts" time="30.143">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--02f11-elect-component-for-editing-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--02f11-elect-component-for-editing-firefox/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [firefox] › editor.spec.ts:68:7 › Page Studio Editor › should select component for editing ───────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('text=Click me').first()
+
+
+      73 |     // Click on the button in the canvas to select it
+      74 |     const buttonInCanvas = page.locator('text=Click me').first();
+    > 75 |     await buttonInCanvas.click();
+         |                          ^
+      76 |
+      77 |     // Verify properties panel shows button properties
+      78 |     await expect(page.locator('text=Button Properties')).toBeVisible();
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:75:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--02f11-elect-component-for-editing-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--02f11-elect-component-for-editing-firefox/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should edit button properties" classname="editor.spec.ts" time="30.076">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-edit-button-properties-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-edit-button-properties-firefox/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [firefox] › editor.spec.ts:82:7 › Page Studio Editor › should edit button properties ─────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('text=Click me').first()
+
+
+      87 |     // Select button
+      88 |     const buttonInCanvas = page.locator('text=Click me').first();
+    > 89 |     await buttonInCanvas.click();
+         |                          ^
+      90 |
+      91 |     // Edit label
+      92 |     const labelInput = page.locator('input[placeholder="Button text"]');
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:89:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-edit-button-properties-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-edit-button-properties-firefox/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should change button variant" classname="editor.spec.ts" time="30.106">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-change-button-variant-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-change-button-variant-firefox/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [firefox] › editor.spec.ts:103:7 › Page Studio Editor › should change button variant ─────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('text=Click me').first()
+
+
+      107 |
+      108 |     // Select button
+    > 109 |     await page.locator('text=Click me').first().click();
+          |                                                 ^
+      110 |
+      111 |     // Change variant
+      112 |     const variantSelect = page.locator('#variant').first();
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:109:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-change-button-variant-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-change-button-variant-firefox/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should delete component" classname="editor.spec.ts" time="6.744">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-delete-component-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-delete-component-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › editor.spec.ts:124:7 › Page Studio Editor › should delete component ──────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Click me')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Click me')
+
+
+      127 |     await buttonPaletteItem.click();
+      128 |
+    > 129 |     await expect(page.locator('text=Click me')).toBeVisible();
+          |                                                 ^
+      130 |
+      131 |     // Select button
+      132 |     await page.locator('text=Click me').first().click();
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:129:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-delete-component-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-delete-component-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should undo component addition" classname="editor.spec.ts" time="6.768">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-undo-component-addition-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-undo-component-addition-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › editor.spec.ts:145:7 › Page Studio Editor › should undo component addition ───────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Click me')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Click me')
+
+
+      148 |     await buttonPaletteItem.click();
+      149 |
+    > 150 |     await expect(page.locator('text=Click me')).toBeVisible();
+          |                                                 ^
+      151 |
+      152 |     // Click undo
+      153 |     const undoButton = page.locator('button[aria-label="Undo"]');
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:150:49
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-undo-component-addition-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-undo-component-addition-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should redo component addition" classname="editor.spec.ts" time="30.168">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-redo-component-addition-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-redo-component-addition-firefox/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [firefox] › editor.spec.ts:160:7 › Page Studio Editor › should redo component addition ───────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('button[aria-label="Undo"]')
+        - locator resolved to <button disabled aria-label="Undo" title="Undo (Ctrl+Z)" class="p-2 rounded-md transition-colors opacity-50 cursor-not-allowed">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        55 × waiting for element to be visible, enabled and stable
+           - element is not enabled
+         - retrying click action
+           - waiting 500ms
+
+
+      164 |
+      165 |     // Undo
+    > 166 |     await page.locator('button[aria-label="Undo"]').click();
+          |                                                     ^
+      167 |
+      168 |     // Redo
+      169 |     const redoButton = page.locator('button[aria-label="Redo"]');
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:166:53
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-redo-component-addition-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-redo-component-addition-firefox/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should mark changes as unsaved" classname="editor.spec.ts" time="6.723">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-mark-changes-as-unsaved-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-mark-changes-as-unsaved-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › editor.spec.ts:178:7 › Page Studio Editor › should mark changes as unsaved ───────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Unsaved changes')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Unsaved changes')
+
+
+      185 |
+      186 |     // Verify unsaved changes indicator
+    > 187 |     await expect(page.locator('text=Unsaved changes')).toBeVisible();
+          |                                                        ^
+      188 |   });
+      189 |
+      190 |   test('should enable save button only with unsaved changes', async () => {
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:187:56
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-mark-changes-as-unsaved-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-mark-changes-as-unsaved-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should enable save button only with unsaved changes" classname="editor.spec.ts" time="6.728">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--821ae-n-only-with-unsaved-changes-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--821ae-n-only-with-unsaved-changes-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeEnabled() failed" type="expect.toBeEnabled">
+<![CDATA[  [firefox] › editor.spec.ts:190:7 › Page Studio Editor › should enable save button only with unsaved changes 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  locator('button:has-text("Save")')
+    Expected: enabled
+    Received: disabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeEnabled" with timeout 5000ms
+      - waiting for locator('button:has-text("Save")')
+        14 × locator resolved to <button disabled data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground h…>…</button>
+           - unexpected value "disabled"
+
+
+      199 |
+      200 |     // Now enabled
+    > 201 |     await expect(saveButton).toBeEnabled();
+          |                              ^
+      202 |   });
+      203 |
+      204 |   test('should add text component and edit content', async () => {
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:201:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--821ae-n-only-with-unsaved-changes-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--821ae-n-only-with-unsaved-changes-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should add text component and edit content" classname="editor.spec.ts" time="30.084">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--833e0--component-and-edit-content-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--833e0--component-and-edit-content-firefox/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [firefox] › editor.spec.ts:204:7 › Page Studio Editor › should add text component and edit content 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('text=Add your text here')
+
+
+      208 |
+      209 |     // Select text
+    > 210 |     await page.locator('text=Add your text here').click();
+          |                                                   ^
+      211 |
+      212 |     // Edit content
+      213 |     const contentTextarea = page.locator('textarea[placeholder="Text content"]');
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:210:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--833e0--component-and-edit-content-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--833e0--component-and-edit-content-firefox/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Page Studio Editor › should add card component" classname="editor.spec.ts" time="6.919">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-card-component-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-card-component-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › editor.spec.ts:224:7 › Page Studio Editor › should add card component ────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Card Title')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Card Title')
+
+
+      228 |
+      229 |     // Verify card was added
+    > 230 |     await expect(page.locator('text=Card Title')).toBeVisible();
+          |                                                   ^
+      231 |   });
+      232 |
+      233 |   test('should add hero component', async () => {
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:230:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-add-card-component-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-add-card-component-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should add hero component" classname="editor.spec.ts" time="6.891">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-hero-component-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor-should-add-hero-component-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › editor.spec.ts:233:7 › Page Studio Editor › should add hero component ────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Welcome to our page')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Welcome to our page')
+
+
+      237 |
+      238 |     // Verify hero was added
+    > 239 |     await expect(page.locator('text=Welcome to our page')).toBeVisible();
+          |                                                            ^
+      240 |   });
+      241 |
+      242 |   test('should add grid component with children', async () => {
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:239:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor-should-add-hero-component-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor-should-add-hero-component-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should add grid component with children" classname="editor.spec.ts" time="1.854">
+</testcase>
+<testcase name="Page Studio Editor › should show/hide empty canvas message" classname="editor.spec.ts" time="6.784">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--5d619-w-hide-empty-canvas-message-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--5d619-w-hide-empty-canvas-message-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › editor.spec.ts:251:7 › Page Studio Editor › should show/hide empty canvas message ────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Drag components here to get started')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Drag components here to get started')
+
+
+      253 |     await expect(
+      254 |       page.locator('text=Drag components here to get started')
+    > 255 |     ).toBeVisible();
+          |       ^
+      256 |
+      257 |     // Add component
+      258 |     const buttonPaletteItem = page.locator('[title="Clickable button element"]').first();
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:255:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--5d619-w-hide-empty-canvas-message-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--5d619-w-hide-empty-canvas-message-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Page Studio Editor › should display component count in status bar" classname="editor.spec.ts" time="6.17">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|editor-Page-Studio-Editor--1456c-mponent-count-in-status-bar-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|editor-Page-Studio-Editor--1456c-mponent-count-in-status-bar-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › editor.spec.ts:267:7 › Page Studio Editor › should display component count in status bar 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=1 component on page')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=1 component on page')
+
+
+      274 |
+      275 |     // Count should update
+    > 276 |     await expect(page.locator('text=1 component on page')).toBeVisible();
+          |                                                            ^
+      277 |
+      278 |     // Add another
+      279 |     await buttonPaletteItem.click();
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/editor.spec.ts:276:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/editor-Page-Studio-Editor--1456c-mponent-count-in-status-bar-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/editor-Page-Studio-Editor--1456c-mponent-count-in-status-bar-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="homepage.spec.ts" timestamp="2026-05-16T20:00:26.978Z" hostname="firefox" tests="17" failures="0" skipped="0" time="16.207" errors="0">
+<testcase name="Homepage › Page Rendering › should load homepage successfully" classname="homepage.spec.ts" time="1.257">
+</testcase>
+<testcase name="Homepage › Page Rendering › should display hero section" classname="homepage.spec.ts" time="1.662">
+</testcase>
+<testcase name="Homepage › Page Rendering › should display published pages section" classname="homepage.spec.ts" time="0.624">
+</testcase>
+<testcase name="Homepage › Navigation › should have editor link" classname="homepage.spec.ts" time="1.856">
+</testcase>
+<testcase name="Homepage › Navigation › should navigate to editor when clicked" classname="homepage.spec.ts" time="0.881">
+</testcase>
+<testcase name="Homepage › Published Pages Display › should show published pages if available" classname="homepage.spec.ts" time="0.598">
+</testcase>
+<testcase name="Homepage › Published Pages Display › should have preview button for published pages" classname="homepage.spec.ts" time="0.607">
+</testcase>
+<testcase name="Homepage › Published Pages Display › should have view button for published pages" classname="homepage.spec.ts" time="0.639">
+</testcase>
+<testcase name="Homepage › Accessibility › should have no accessibility violations" classname="homepage.spec.ts" time="0.849">
+<system-out>
+<![CDATA[No accessibility violations detected!
+]]>
+</system-out>
+</testcase>
+<testcase name="Homepage › Accessibility › should have proper heading hierarchy" classname="homepage.spec.ts" time="0.684">
+</testcase>
+<testcase name="Homepage › Accessibility › should have alt text on images" classname="homepage.spec.ts" time="0.682">
+</testcase>
+<testcase name="Homepage › Accessibility › should have accessible links" classname="homepage.spec.ts" time="0.711">
+</testcase>
+<testcase name="Homepage › Accessibility › should have sufficient color contrast" classname="homepage.spec.ts" time="0.804">
+</testcase>
+<testcase name="Homepage › Responsive Design › should be responsive on mobile" classname="homepage.spec.ts" time="1.019">
+</testcase>
+<testcase name="Homepage › Responsive Design › should be responsive on tablet" classname="homepage.spec.ts" time="1.047">
+</testcase>
+<testcase name="Homepage › Responsive Design › should be responsive on desktop" classname="homepage.spec.ts" time="1.087">
+</testcase>
+<testcase name="Homepage › Performance › should load in reasonable time" classname="homepage.spec.ts" time="1.2">
+</testcase>
+</testsuite>
+<testsuite name="preview.spec.ts" timestamp="2026-05-16T20:00:26.978Z" hostname="firefox" tests="11" failures="2" skipped="0" time="46.7" errors="1">
+<testcase name="Preview Pages › Preview Rendering › should render preview page" classname="preview.spec.ts" time="0.883">
+</testcase>
+<testcase name="Preview Pages › Preview Rendering › should show back button" classname="preview.spec.ts" time="5.733">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|preview-Preview-Pages-Prev-dcf91-ing-should-show-back-button-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|preview-Preview-Pages-Prev-dcf91-ing-should-show-back-button-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › preview.spec.ts:21:9 › Preview Pages › Preview Rendering › should show back button ───
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: /back/i })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('button', { name: /back/i })
+
+
+      24 |       if (response && response.status() === 200) {
+      25 |         const backButton = page.getByRole('button', { name: /back/i });
+    > 26 |         await expect(backButton).toBeVisible();
+         |                                  ^
+      27 |       }
+      28 |     });
+      29 |
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/preview.spec.ts:26:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/preview-Preview-Pages-Prev-dcf91-ing-should-show-back-button-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/preview-Preview-Pages-Prev-dcf91-ing-should-show-back-button-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Preview Pages › Preview Rendering › should handle missing pages gracefully" classname="preview.spec.ts" time="0.745">
+</testcase>
+<testcase name="Preview Pages › Preview Navigation › should navigate back to home" classname="preview.spec.ts" time="30.068">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|preview-Preview-Pages-Prev-46e1c-hould-navigate-back-to-home-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|preview-Preview-Pages-Prev-46e1c-hould-navigate-back-to-home-firefox/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [firefox] › preview.spec.ts:42:9 › Preview Pages › Preview Navigation › should navigate back to home 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: /back|home/i }).first()
+
+
+      45 |       if (response && response.status() === 200) {
+      46 |         const backButton = page.getByRole('button', { name: /back|home/i }).first();
+    > 47 |         await backButton.click();
+         |                          ^
+      48 |         await page.waitForURL('/');
+      49 |         expect(page.url()).toContain('/');
+      50 |       }
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/preview.spec.ts:47:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/preview-Preview-Pages-Prev-46e1c-hould-navigate-back-to-home-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/preview-Preview-Pages-Prev-46e1c-hould-navigate-back-to-home-firefox/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Preview Pages › Preview Navigation › should have edit link if available" classname="preview.spec.ts" time="0.503">
+</testcase>
+<testcase name="Preview Pages › Preview Accessibility › should have accessible preview page" classname="preview.spec.ts" time="0.629">
+<system-out>
+<![CDATA[┌─────────┬──────────┬────────────┬─────────────────────────────────────────────────────┬───────┐
+│ (index) │ id       │ impact     │ description                                         │ nodes │
+├─────────┼──────────┼────────────┼─────────────────────────────────────────────────────┼───────┤
+│ 0       │ [32m'region'[39m │ [32m'moderate'[39m │ [32m'Ensure all page content is contained by landmarks'[39m │ [33m2[39m     │
+└─────────┴──────────┴────────────┴─────────────────────────────────────────────────────┴───────┘
+Accessibility violations found: AssertionError [ERR_ASSERTION]: 1 accessibility violation was detected
+
+1 !== 0
+
+    at testResultDependsOnViolations [90m(/Users/arnab/Webdev/Next/page-studio-cms/[39mnode_modules/[4maxe-playwright[24m/dist/utils.js:16:26[90m)[39m
+    at [90m/Users/arnab/Webdev/Next/page-studio-cms/[39mnode_modules/[4maxe-playwright[24m/dist/index.js:143:51
+    at Generator.next (<anonymous>)
+    at fulfilled [90m(/Users/arnab/Webdev/Next/page-studio-cms/[39mnode_modules/[4maxe-playwright[24m/dist/index.js:28:58[90m)[39m
+[90m    at runNextTicks (node:internal/process/task_queues:65:5)[39m
+[90m    at processImmediate (node:internal/timers:459:9)[39m
+[90m    at process.callbackTrampoline (node:internal/async_hooks:130:17)[39m {
+  generatedMessage: [33mfalse[39m,
+  code: [32m'ERR_ASSERTION'[39m,
+  actual: [33m1[39m,
+  expected: [33m0[39m,
+  operator: [32m'strictEqual'[39m
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Preview Pages › Preview Accessibility › should have proper structure" classname="preview.spec.ts" time="0.847">
+</testcase>
+<testcase name="Preview Pages › Preview Accessibility › should be keyboard navigable" classname="preview.spec.ts" time="0.461">
+</testcase>
+<testcase name="Preview Pages › Content Display › should display page title if available" classname="preview.spec.ts" time="0.382">
+</testcase>
+<testcase name="Preview Pages › Content Display › should render components" classname="preview.spec.ts" time="0.447">
+</testcase>
+<testcase name="Preview Pages › Mobile Preview › should be mobile responsive" classname="preview.spec.ts" time="6.002">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|preview-Preview-Pages-Mobi-b74b9-should-be-mobile-responsive-firefox/test-failed-1.png]]
+
+[[ATTACHMENT|preview-Preview-Pages-Mobi-b74b9-should-be-mobile-responsive-firefox/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › preview.spec.ts:129:9 › Preview Pages › Mobile Preview › should be mobile responsive ─
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: /back/i })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('button', { name: /back/i })
+
+
+      133 |       if (response && response.status() === 200) {
+      134 |         const backButton = page.getByRole('button', { name: /back/i });
+    > 135 |         await expect(backButton).toBeVisible();
+          |                                  ^
+      136 |       }
+      137 |     });
+      138 |   });
+        at /Users/arnab/Webdev/Next/page-studio-cms/tests/e2e/preview.spec.ts:135:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/preview-Preview-Pages-Mobi-b74b9-should-be-mobile-responsive-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/preview-Preview-Pages-Mobi-b74b9-should-be-mobile-responsive-firefox/error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>

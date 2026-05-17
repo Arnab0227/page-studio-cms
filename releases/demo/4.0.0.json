@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "version": "4.0.0",
+    "publishedAt": "2026-05-17T11:59:56.587Z",
+    "slug": "demo",
+    "changelog": [
+      "Published version with 3 components"
+    ],
+    "pageId": "demo-page",
+    "contentHash": "be23521f2469450ebb43607499484582d53e674dd3f51130c13a47856c8266ad"
+  },
+  "page": {
+    "sys": {
+      "id": "demo-page",
+      "type": "Entry",
+      "createdAt": "2026-05-17T11:59:45.493Z",
+      "updatedAt": "2026-05-17T11:59:45.493Z",
+      "locale": "en-US",
+      "revision": 1,
+      "space": {
+        "sys": {
+          "id": "merh65vl8pmr",
+          "type": "Link",
+          "linkType": "Space"
+        }
+      },
+      "contentType": {
+        "sys": {
+          "id": "page",
+          "type": "Link",
+          "linkType": "ContentType"
+        }
+      }
+    },
+    "fields": {
+      "title": "Demo Page",
+      "slug": "demo",
+      "components": [
+        {
+          "id": "1779019187738-zkwecz5ko",
+          "type": "button",
+          "props": {
+            "label": "Click me",
+            "variant": "primary",
+            "size": "md",
+            "_x": 36,
+            "_y": 181,
+            "_width": 300,
+            "_height": "auto"
+          },
+          "layout": {
+            "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 16,
+              "left": 0
+            },
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignment": "left"
+          },
+          "metadata": {
+            "createdAt": "2026-05-17T11:59:47.738Z",
+            "updatedAt": "2026-05-17T11:59:47.738Z"
+          }
+        },
+        {
+          "id": "1779019188965-hcteejt27",
+          "type": "card",
+          "props": {
+            "title": "Card Title",
+            "description": "Add card description here",
+            "_x": 0,
+            "_y": 4,
+            "_width": 300,
+            "_height": "auto"
+          },
+          "layout": {
+            "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 16,
+              "left": 0
+            },
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignment": "left"
+          },
+          "metadata": {
+            "createdAt": "2026-05-17T11:59:48.965Z",
+            "updatedAt": "2026-05-17T11:59:48.965Z"
+          }
+        },
+        {
+          "id": "1779019192817-mzau9lx1n",
+          "type": "section",
+          "props": {
+            "title": "Section",
+            "layout": "single",
+            "padding": "md",
+            "_x": 29,
+            "_y": 338,
+            "_width": 300,
+            "_height": "auto"
+          },
+          "layout": {
+            "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 16,
+              "left": 0
+            },
+            "padding": {
+              "top": 16,
+              "right": 16,
+              "bottom": 16,
+              "left": 16
+            },
+            "alignment": "full"
+          },
+          "children": [],
+          "metadata": {
+            "createdAt": "2026-05-17T11:59:52.817Z",
+            "updatedAt": "2026-05-17T11:59:52.817Z"
+          }
+        }
+      ],
+      "published": false
+    }
+  },
+  "components": [
+    {
+      "id": "1779019187738-zkwecz5ko",
+      "type": "button",
+      "props": {
+        "label": "Click me",
+        "variant": "primary",
+        "size": "md",
+        "_x": 36,
+        "_y": 181,
+        "_width": 300,
+        "_height": "auto"
+      },
+      "layout": {
+        "margin": {
+          "top": 0,
+          "right": 0,
+          "bottom": 16,
+          "left": 0
+        },
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignment": "left"
+      },
+      "metadata": {
+        "createdAt": "2026-05-17T11:59:47.738Z",
+        "updatedAt": "2026-05-17T11:59:47.738Z"
+      }
+    },
+    {
+      "id": "1779019188965-hcteejt27",
+      "type": "card",
+      "props": {
+        "title": "Card Title",
+        "description": "Add card description here",
+        "_x": 0,
+        "_y": 4,
+        "_width": 300,
+        "_height": "auto"
+      },
+      "layout": {
+        "margin": {
+          "top": 0,
+          "right": 0,
+          "bottom": 16,
+          "left": 0
+        },
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignment": "left"
+      },
+      "metadata": {
+        "createdAt": "2026-05-17T11:59:48.965Z",
+        "updatedAt": "2026-05-17T11:59:48.965Z"
+      }
+    },
+    {
+      "id": "1779019192817-mzau9lx1n",
+      "type": "section",
+      "props": {
+        "title": "Section",
+        "layout": "single",
+        "padding": "md",
+        "_x": 29,
+        "_y": 338,
+        "_width": 300,
+        "_height": "auto"
+      },
+      "layout": {
+        "margin": {
+          "top": 0,
+          "right": 0,
+          "bottom": 16,
+          "left": 0
+        },
+        "padding": {
+          "top": 16,
+          "right": 16,
+          "bottom": 16,
+          "left": 16
+        },
+        "alignment": "full"
+      },
+      "children": [],
+      "metadata": {
+        "createdAt": "2026-05-17T11:59:52.817Z",
+        "updatedAt": "2026-05-17T11:59:52.817Z"
+      }
+    }
+  ]
+}

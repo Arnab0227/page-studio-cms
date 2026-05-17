@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "version": "0.0.1",
+    "publishedAt": "2026-05-17T12:45:37.645Z",
+    "slug": "page-1779021921320",
+    "changelog": [
+      "Published version with 3 components"
+    ],
+    "pageId": "page-1779021921320",
+    "contentHash": "4d9977842384bf00eadc298eb3a8907506b4ab8a11df7791d0d11826b5101972"
+  },
+  "page": {
+    "sys": {
+      "id": "page-1779021921320",
+      "type": "Entry",
+      "createdAt": "2026-05-17T12:45:21.320Z",
+      "updatedAt": "2026-05-17T12:45:21.320Z",
+      "locale": "en-US",
+      "revision": 1,
+      "space": {
+        "sys": {
+          "id": "merh65vl8pmr",
+          "type": "Link",
+          "linkType": "Space"
+        }
+      },
+      "contentType": {
+        "sys": {
+          "id": "page",
+          "type": "Link",
+          "linkType": "ContentType"
+        }
+      }
+    },
+    "fields": {
+      "title": "Untitled Page",
+      "slug": "page-1779021921320",
+      "components": [
+        {
+          "id": "1779021924257-sts0odtv1",
+          "type": "button",
+          "props": {
+            "label": "Click me",
+            "variant": "primary",
+            "size": "md",
+            "_x": 137,
+            "_y": 109,
+            "_width": 300,
+            "_height": "auto"
+          },
+          "layout": {
+            "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 16,
+              "left": 0
+            },
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignment": "left"
+          },
+          "metadata": {
+            "createdAt": "2026-05-17T12:45:24.257Z",
+            "updatedAt": "2026-05-17T12:45:24.257Z"
+          }
+        },
+        {
+          "id": "1779021925269-quly36l4d",
+          "type": "text",
+          "props": {
+            "content": "Add your text here",
+            "variant": "p",
+            "textAlign": "left",
+            "_x": 119,
+            "_y": 40,
+            "_width": 300,
+            "_height": "auto"
+          },
+          "layout": {
+            "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 16,
+              "left": 0
+            },
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignment": "left"
+          },
+          "metadata": {
+            "createdAt": "2026-05-17T12:45:25.269Z",
+            "updatedAt": "2026-05-17T12:45:25.269Z"
+          }
+        },
+        {
+          "id": "1779021928204-h3306g6ww",
+          "type": "hero",
+          "props": {
+            "headline": "Welcome to our page",
+            "description": "This is a hero section",
+            "height": "lg",
+            "_x": 73,
+            "_y": 240,
+            "_width": 300,
+            "_height": "auto"
+          },
+          "layout": {
+            "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 16,
+              "left": 0
+            },
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignment": "full"
+          },
+          "metadata": {
+            "createdAt": "2026-05-17T12:45:28.204Z",
+            "updatedAt": "2026-05-17T12:45:28.204Z"
+          }
+        }
+      ],
+      "published": false
+    }
+  },
+  "components": [
+    {
+      "id": "1779021924257-sts0odtv1",
+      "type": "button",
+      "props": {
+        "label": "Click me",
+        "variant": "primary",
+        "size": "md",
+        "_x": 137,
+        "_y": 109,
+        "_width": 300,
+        "_height": "auto"
+      },
+      "layout": {
+        "margin": {
+          "top": 0,
+          "right": 0,
+          "bottom": 16,
+          "left": 0
+        },
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignment": "left"
+      },
+      "metadata": {
+        "createdAt": "2026-05-17T12:45:24.257Z",
+        "updatedAt": "2026-05-17T12:45:24.257Z"
+      }
+    },
+    {
+      "id": "1779021925269-quly36l4d",
+      "type": "text",
+      "props": {
+        "content": "Add your text here",
+        "variant": "p",
+        "textAlign": "left",
+        "_x": 119,
+        "_y": 40,
+        "_width": 300,
+        "_height": "auto"
+      },
+      "layout": {
+        "margin": {
+          "top": 0,
+          "right": 0,
+          "bottom": 16,
+          "left": 0
+        },
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignment": "left"
+      },
+      "metadata": {
+        "createdAt": "2026-05-17T12:45:25.269Z",
+        "updatedAt": "2026-05-17T12:45:25.269Z"
+      }
+    },
+    {
+      "id": "1779021928204-h3306g6ww",
+      "type": "hero",
+      "props": {
+        "headline": "Welcome to our page",
+        "description": "This is a hero section",
+        "height": "lg",
+        "_x": 73,
+        "_y": 240,
+        "_width": 300,
+        "_height": "auto"
+      },
+      "layout": {
+        "margin": {
+          "top": 0,
+          "right": 0,
+          "bottom": 16,
+          "left": 0
+        },
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignment": "full"
+      },
+      "metadata": {
+        "createdAt": "2026-05-17T12:45:28.204Z",
+        "updatedAt": "2026-05-17T12:45:28.204Z"
+      }
+    }
+  ]
+}

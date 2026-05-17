@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "version": "3.0.0",
+    "publishedAt": "2026-05-17T11:59:29.884Z",
+    "slug": "demo",
+    "changelog": [
+      "Published version with 2 components"
+    ],
+    "pageId": "demo-page",
+    "contentHash": "72e205b0b0efaafd050c97c35bee69bc873db57730fb407b4dd549fe7dfbc14f"
+  },
+  "page": {
+    "sys": {
+      "id": "demo-page",
+      "type": "Entry",
+      "createdAt": "2026-05-17T11:56:59.685Z",
+      "updatedAt": "2026-05-17T11:56:59.685Z",
+      "locale": "en-US",
+      "revision": 1,
+      "space": {
+        "sys": {
+          "id": "merh65vl8pmr",
+          "type": "Link",
+          "linkType": "Space"
+        }
+      },
+      "contentType": {
+        "sys": {
+          "id": "page",
+          "type": "Link",
+          "linkType": "ContentType"
+        }
+      }
+    },
+    "fields": {
+      "title": "Demo Page",
+      "slug": "demo",
+      "components": [
+        {
+          "id": "1779019021233-py74498fs",
+          "type": "button",
+          "props": {
+            "label": "Click me",
+            "variant": "primary",
+            "size": "md",
+            "_x": 1,
+            "_y": 7,
+            "_width": 100,
+            "_height": "auto"
+          },
+          "layout": {
+            "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 16,
+              "left": 0
+            },
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignment": "left"
+          },
+          "metadata": {
+            "createdAt": "2026-05-17T11:57:01.233Z",
+            "updatedAt": "2026-05-17T11:57:01.233Z"
+          }
+        },
+        {
+          "id": "1779019150880-3rtxrnu9j",
+          "type": "text",
+          "props": {
+            "label": "",
+            "href": "",
+            "content": "gfdgdf",
+            "variant": "h1",
+            "_x": 133,
+            "_y": 4
+          },
+          "layout": {
+            "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 16,
+              "left": 0
+            },
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignment": "left"
+          },
+          "metadata": {
+            "createdAt": "2026-05-17T11:59:10.880Z",
+            "updatedAt": "2026-05-17T11:59:10.880Z"
+          }
+        }
+      ],
+      "published": false
+    }
+  },
+  "components": [
+    {
+      "id": "1779019021233-py74498fs",
+      "type": "button",
+      "props": {
+        "label": "Click me",
+        "variant": "primary",
+        "size": "md",
+        "_x": 1,
+        "_y": 7,
+        "_width": 100,
+        "_height": "auto"
+      },
+      "layout": {
+        "margin": {
+          "top": 0,
+          "right": 0,
+          "bottom": 16,
+          "left": 0
+        },
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignment": "left"
+      },
+      "metadata": {
+        "createdAt": "2026-05-17T11:57:01.233Z",
+        "updatedAt": "2026-05-17T11:57:01.233Z"
+      }
+    },
+    {
+      "id": "1779019150880-3rtxrnu9j",
+      "type": "text",
+      "props": {
+        "label": "",
+        "href": "",
+        "content": "gfdgdf",
+        "variant": "h1",
+        "_x": 133,
+        "_y": 4
+      },
+      "layout": {
+        "margin": {
+          "top": 0,
+          "right": 0,
+          "bottom": 16,
+          "left": 0
+        },
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignment": "left"
+      },
+      "metadata": {
+        "createdAt": "2026-05-17T11:59:10.880Z",
+        "updatedAt": "2026-05-17T11:59:10.880Z"
+      }
+    }
+  ]
+}

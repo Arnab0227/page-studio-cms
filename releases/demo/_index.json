@@ -1,0 +1,30 @@
+{
+  "slug": "demo",
+  "versions": [
+    {
+      "version": "0.0.1",
+      "publishedAt": "2026-05-16T19:22:41.314Z",
+      "contentHash": "9039aa95b5a0a4defc3c176677afaf7a373d9ddd99f3f8c4d18cb0345d9f190b"
+    },
+    {
+      "version": "1.0.0",
+      "publishedAt": "2026-05-16T20:08:16.584Z",
+      "contentHash": "0475ccd768341fb3e9926794f7e78d8748d4defa5f59780a47bf07846bcd3549"
+    },
+    {
+      "version": "2.0.0",
+      "publishedAt": "2026-05-16T20:17:45.007Z",
+      "contentHash": "527257e66746bfd51d8ac87d168c32dad74c54c58e5d2103fdf86c0eb8c110a4"
+    },
+    {
+      "version": "3.0.0",
+      "publishedAt": "2026-05-17T11:59:29.886Z",
+      "contentHash": "72e205b0b0efaafd050c97c35bee69bc873db57730fb407b4dd549fe7dfbc14f"
+    },
+    {
+      "version": "4.0.0",
+      "publishedAt": "2026-05-17T11:59:56.589Z",
+      "contentHash": "be23521f2469450ebb43607499484582d53e674dd3f51130c13a47856c8266ad"
+    }
+  ]
+}

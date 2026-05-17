@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "publishedAt": "2026-05-16T20:17:45.005Z",
+    "slug": "demo",
+    "changelog": [
+      "Published version with 3 components"
+    ],
+    "pageId": "demo-page",
+    "contentHash": "527257e66746bfd51d8ac87d168c32dad74c54c58e5d2103fdf86c0eb8c110a4"
+  },
+  "page": {
+    "sys": {
+      "id": "demo-page",
+      "type": "Entry",
+      "createdAt": "2026-05-16T20:17:32.662Z",
+      "updatedAt": "2026-05-16T20:17:32.662Z",
+      "locale": "en-US",
+      "revision": 1,
+      "space": {
+        "sys": {
+          "id": "merh65vl8pmr",
+          "type": "Link",
+          "linkType": "Space"
+        }
+      },
+      "contentType": {
+        "sys": {
+          "id": "page",
+          "type": "Link",
+          "linkType": "ContentType"
+        }
+      }
+    },
+    "fields": {
+      "title": "Demo Page",
+      "slug": "demo",
+      "components": [
+        {
+          "id": "1778962654234-2v92wk90f",
+          "type": "text",
+          "props": {
+            "content": "Add your text here",
+            "variant": "p",
+            "textAlign": "left",
+            "_x": 155.0034637451172,
+            "_y": 47.8680419921875,
+            "_width": 300,
+            "_height": "auto"
+          },
+          "layout": {
+            "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 16,
+              "left": 0
+            },
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignment": "left"
+          },
+          "metadata": {
+            "createdAt": "2026-05-16T20:17:34.234Z",
+            "updatedAt": "2026-05-16T20:17:34.234Z"
+          }
+        },
+        {
+          "id": "1778962657348-4kitvgndw",
+          "type": "button",
+          "props": {
+            "label": "Click me",
+            "variant": "primary",
+            "size": "md",
+            "_x": 137.0034637451172,
+            "_y": 164.8680419921875,
+            "_width": 300,
+            "_height": "auto"
+          },
+          "layout": {
+            "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 16,
+              "left": 0
+            },
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignment": "left"
+          },
+          "metadata": {
+            "createdAt": "2026-05-16T20:17:37.348Z",
+            "updatedAt": "2026-05-16T20:17:37.348Z"
+          }
+        },
+        {
+          "id": "1778962660042-0bnln3thh",
+          "type": "hero",
+          "props": {
+            "headline": "Welcome to our page",
+            "description": "This is a hero section",
+            "height": "lg",
+            "_x": 147.0034637451172,
+            "_y": 308.8680419921875,
+            "_width": 300,
+            "_height": "auto"
+          },
+          "layout": {
+            "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 16,
+              "left": 0
+            },
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignment": "full"
+          },
+          "metadata": {
+            "createdAt": "2026-05-16T20:17:40.042Z",
+            "updatedAt": "2026-05-16T20:17:40.042Z"
+          }
+        }
+      ],
+      "published": false
+    }
+  },
+  "components": [
+    {
+      "id": "1778962654234-2v92wk90f",
+      "type": "text",
+      "props": {
+        "content": "Add your text here",
+        "variant": "p",
+        "textAlign": "left",
+        "_x": 155.0034637451172,
+        "_y": 47.8680419921875,
+        "_width": 300,
+        "_height": "auto"
+      },
+      "layout": {
+        "margin": {
+          "top": 0,
+          "right": 0,
+          "bottom": 16,
+          "left": 0
+        },
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignment": "left"
+      },
+      "metadata": {
+        "createdAt": "2026-05-16T20:17:34.234Z",
+        "updatedAt": "2026-05-16T20:17:34.234Z"
+      }
+    },
+    {
+      "id": "1778962657348-4kitvgndw",
+      "type": "button",
+      "props": {
+        "label": "Click me",
+        "variant": "primary",
+        "size": "md",
+        "_x": 137.0034637451172,
+        "_y": 164.8680419921875,
+        "_width": 300,
+        "_height": "auto"
+      },
+      "layout": {
+        "margin": {
+          "top": 0,
+          "right": 0,
+          "bottom": 16,
+          "left": 0
+        },
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignment": "left"
+      },
+      "metadata": {
+        "createdAt": "2026-05-16T20:17:37.348Z",
+        "updatedAt": "2026-05-16T20:17:37.348Z"
+      }
+    },
+    {
+      "id": "1778962660042-0bnln3thh",
+      "type": "hero",
+      "props": {
+        "headline": "Welcome to our page",
+        "description": "This is a hero section",
+        "height": "lg",
+        "_x": 147.0034637451172,
+        "_y": 308.8680419921875,
+        "_width": 300,
+        "_height": "auto"
+      },
+      "layout": {
+        "margin": {
+          "top": 0,
+          "right": 0,
+          "bottom": 16,
+          "left": 0
+        },
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignment": "full"
+      },
+      "metadata": {
+        "createdAt": "2026-05-16T20:17:40.042Z",
+        "updatedAt": "2026-05-16T20:17:40.042Z"
+      }
+    }
+  ]
+}
