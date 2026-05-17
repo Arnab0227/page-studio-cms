@@ -1,4 +1,5 @@
 'use client';
+export const dynamic = 'force-dynamic';
 
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -78,11 +79,9 @@ export default function EditorPage() {
             return;
           } else {
             console.warn('[v0] Requested page ID not found:', pageId);
-            // Fall through to load first page or create new
           }
         }
         
-        // Load first existing page if available
         if (loadedPages.length > 0) {
           console.log('[v0] Loaded existing page:', loadedPages[0].fields.title);
           dispatch(setCurrentPage(loadedPages[0]));
