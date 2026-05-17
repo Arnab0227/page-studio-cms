@@ -13,6 +13,22 @@ The project allows authorized users to:
 
 ---
 
+# Notes About the Implementation
+
+This was my first time working with Contentful and understanding its content modeling and preview/published workflows. I used AI assistance during the project to:
+
+* understand certain Contentful integration patterns
+* generate some boilerplate code
+* accelerate repetitive setup work
+* help structure some test cases
+* validate architectural approaches
+
+However, the implementation logic, architecture decisions, publishing workflow design, SemVer strategy, editor behavior, rendering flow, and feature-level problem solving were designed and implemented by me.
+
+AI was used as an assistant/tool during development, not as a replacement for the actual engineering and architectural decisions behind the project.
+
+---
+
 # Tech Stack
 
 * Next.js (App Router)
@@ -115,20 +131,6 @@ CI pipeline validates:
 
 ---
 
-# Project Structure
-
-src/
-├── app/
-├── components/
-├── lib/
-├── registry/
-├── schemas/
-├── store/
-├── tests/
-├── releases/
-
----
-
 # Running the Project
 
 ## Install dependencies
@@ -162,26 +164,6 @@ npm run test
 Run Playwright tests:
 
 npm run test:e2e
-
-Run accessibility tests:
-
-npm run test:a11y
-
----
-
-# Notes About the Implementation
-
-This was my first time working with Contentful and understanding its content modeling and preview/published workflows. I used AI assistance during the project to:
-
-* understand certain Contentful integration patterns
-* generate some boilerplate code
-* accelerate repetitive setup work
-* help structure some test cases
-* validate architectural approaches
-
-However, the implementation logic, architecture decisions, publishing workflow design, SemVer strategy, editor behavior, rendering flow, and feature-level problem solving were designed and implemented by me.
-
-AI was used as an assistant/tool during development, not as a replacement for the actual engineering and architectural decisions behind the project.
 
 ---
 
