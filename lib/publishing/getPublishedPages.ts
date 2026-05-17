@@ -1,5 +1,5 @@
-import fs from 'fs/promises';
-import path from 'path';
+import { createClient } from 'contentful';
+import type { ContentfulClientApi } from 'contentful';
 import type { PageModel } from '@/lib/schema';
 
 interface PublishedPageInfo {
@@ -12,52 +12,95 @@ interface PublishedPageInfo {
   author?: string;
 }
 
+const CONTENTFUL_SPACE_ID = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || process.env.CONTENTFUL_SPACE_ID;
+const CONTENTFUL_ACCESS_TOKEN = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN || process.env.CONTENTFUL_ACCESS_TOKEN;
+
+let deliveryClient: ContentfulClientApi<'WITHOUT_UNRESOLVABLE_LINKS'> | null = null;
+
+function getDeliveryClient() {
+  if (deliveryClient) {
+    return deliveryClient;
+  }
+
+  if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
+    console.error('[v0] Contentful credentials missing for getPublishedPages');
+    throw new Error('Contentful credentials are missing');
+  }
+
+  deliveryClient = createClient({
+    space: CONTENTFUL_SPACE_ID,
+    accessToken: CONTENTFUL_ACCESS_TOKEN,
+    environment: 'master',
+  });
+
+  return deliveryClient;
+}
+
+interface ReleaseEntry {
+  fields: {
+    version: string;
+    slug: string;
+    pageId: string;
+    pageTitle: string;
+    publishedAt: string;
+    releaseData?: string;
+  };
+  sys: {
+    createdAt: string;
+  };
+}
+
 export async function getPublishedPages(): Promise<PublishedPageInfo[]> {
   try {
-    const releasesDir = path.join(process.cwd(), 'releases');
+    const client = getDeliveryClient();
+    
+    // Get all unique slugs from releases
+    const entries = await client.getEntries({
+      content_type: 'release',
+      limit: 1000,
+      order: '-sys.createdAt',
+    });
 
-    try {
-      await fs.access(releasesDir);
-    } catch {
-      return []; // No releases yet
+    if (!entries.items || entries.items.length === 0) {
+      console.log('[v0] No published pages found in Contentful');
+      return [];
     }
 
-    const items = await fs.readdir(releasesDir);
+    // Group releases by slug and get the latest version for each
+    const releasesBySlug = new Map<string, ReleaseEntry>();
+
+    for (const item of entries.items) {
+      const entry = item as ReleaseEntry;
+      const slug = entry.fields.slug;
+      
+      // Keep only the first (latest) version for each slug since results are ordered by createdAt
+      if (!releasesBySlug.has(slug)) {
+        releasesBySlug.set(slug, entry);
+      }
+    }
+
     const publishedPages: PublishedPageInfo[] = [];
 
-    for (const slug of items) {
-      const slugDir = path.join(releasesDir, slug);
-      const stats = await fs.stat(slugDir);
-
-      if (!stats.isDirectory()) continue;
-
-      const indexPath = path.join(slugDir, '_index.json');
+    for (const [slug, entry] of releasesBySlug.entries()) {
       try {
-        const indexContent = await fs.readFile(indexPath, 'utf-8');
-        const index = JSON.parse(indexContent);
-
-        if (index.versions && index.versions.length > 0) {
-          const latestVersion = index.versions[index.versions.length - 1];
-
-          const releasePath = path.join(
-            slugDir,
-            `${latestVersion.version}.json`
-          );
-          const releaseContent = await fs.readFile(releasePath, 'utf-8');
-          const release = JSON.parse(releaseContent);
-
+        const releaseDataStr = entry.fields.releaseData;
+        
+        if (releaseDataStr) {
+          const releaseData = JSON.parse(releaseDataStr);
+          const page: PageModel = releaseData.page;
+          
           publishedPages.push({
-            id: release.page.sys.id,
-            title: release.page.fields.title,
+            id: entry.fields.pageId,
+            title: entry.fields.pageTitle || page.fields.title,
             slug: slug,
-            description: release.page.fields.description,
-            publishedAt: release.metadata.publishedAt,
-            version: latestVersion.version,
+            description: page.fields.description,
+            publishedAt: entry.fields.publishedAt,
+            version: entry.fields.version,
             author: 'System',
           });
         }
       } catch (error) {
-        console.error(`Error reading release for ${slug}:`, error);
+        console.error(`Error parsing release for ${slug}:`, error);
       }
     }
 
@@ -66,7 +109,7 @@ export async function getPublishedPages(): Promise<PublishedPageInfo[]> {
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     );
   } catch (error) {
-    console.error('Error getting published pages:', error);
+    console.error('[v0] Error getting published pages from Contentful:', error);
     return [];
   }
 }
